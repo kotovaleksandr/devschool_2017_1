@@ -12,6 +12,9 @@ namespace Evernote.DataLayer.Sql
 
 		public UsersRepository(string connectionString, ICategoriesRepository categoriesRepository)
 		{
+			if (categoriesRepository == null)
+				throw new ArgumentNullException(nameof(categoriesRepository));
+
 			_connectionString = connectionString;
 			_categoriesRepository = categoriesRepository;
 		}

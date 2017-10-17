@@ -30,7 +30,7 @@ namespace Evernote.DataLayer.Sql.Tests
 			var userFromDb = repository.Get(result.Id);
 
 			//asserts
-			Assert.AreEqual(result.Name, userFromDb.Name);
+			Assert.AreEqual(user.Name, userFromDb.Name);
 		}
 
 		[TestMethod]
