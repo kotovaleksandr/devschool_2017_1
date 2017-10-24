@@ -44,6 +44,7 @@ namespace Evernote.Api.Controllers
 		[Route("api/users")]
 		public User Post([FromBody] User user)
 		{
+			Logger.Log.Instance.Info("Создание пользователя с именем: {0}", user.Name);
 			return _usersRepository.Create(user);
 		}
 

@@ -57,6 +57,10 @@
       <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.4.4.12\lib\net45\NLog.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Swashbuckle.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cd1bb07a5ac7c7bc, processorArchitecture=MSIL">
       <HintPath>..\packages\Swashbuckle.Core.5.6.0\lib\net40\Swashbuckle.Core.dll</HintPath>
       <Private>True</Private>
@@ -109,6 +113,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+    <Content Include="NLog.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="NLog.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -128,6 +138,10 @@
     <ProjectReference Include="..\Evernote.DataLayer\Evernote.DataLayer.csproj">
       <Project>{033BD0B6-FBF8-410B-9834-46BA831506F3}</Project>
       <Name>Evernote.DataLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Evernote.Logger\Evernote.Logger.csproj">
+      <Project>{a78c20c0-3a27-4d52-a492-726371e88eab}</Project>
+      <Name>Evernote.Logger</Name>
     </ProjectReference>
     <ProjectReference Include="..\Evernote.Model\Evernote.Model.csproj">
       <Project>{D54870CA-4287-4326-ACD8-358C59D6813B}</Project>
